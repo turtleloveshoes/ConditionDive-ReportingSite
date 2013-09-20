@@ -1,0 +1,123 @@
+<!DOCTYPE html> 
+<html>
+	
+	<head>
+		<title>Report Conditions</title>
+	</head>
+	
+	<body>
+		<br />
+                <form action="" method="post">
+		<table>
+			<tr>
+				<td>Dive Site</td>
+				<td>
+					<select name="diveSite">
+                                            <option value="0" selected="selected">Select dive site...</option>
+                                            <option value="bw">Break Water</option>
+                                            <option value="lv">Lover\'s Cove</option>
+                                            <option value="cs">Coral Street</option>
+                                            <option value="bh">Butterfly House</option>
+                                            <option value="ms">Monastary</option>
+                                            <option value="pl">Point Lobos</option>
+					</select>
+                                </td>
+			</tr>	
+		</table>				
+		<br />
+		
+		<table>
+			<tr>
+				<td>Visibility</td>
+				<td>
+					<select name="condVis">
+                                            <option value="0" selected="selected">Select visibility...</option>
+                                            <option value="40">above 40\'</option>
+                                            <option value="35">30\' - 35\'</option>
+                                            <option value="30">30\' - 35\'</option>
+                                            <option value="25">25\' - 30\'</option>
+                                            <option value="20">20\' - 25\'</option>
+                                            <option value="15">15\' - 20\'</option>
+                                            <option value="10">10\' - 15\'</option>
+                                            <option value="5">5\' - 10\'</option>
+                                            <option value="0">under 5\'</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Surf</td>
+				<td>
+					<select name="condSurf">
+                                            <option selected="selected">Select surf...</option>
+                                            <option value="0">Ankle</option>
+                                            <option value="1">Knee</option>
+                                            <option value="2">Waist</option>
+                                            <option value="3">Shoulder</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Surge</td>
+				<td>
+					<select name="condSurge">
+                                            <option selected="selected">Select surge...</option>
+                                            <option value="0">None</option>
+                                            <option value="1">Light</option>
+                                            <option value="2">Moderate</option>
+                                            <option value="3">Strong</option>
+                                            <option value="4">Very Strong</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Current</td>
+				<td>
+					<select name="condCurrent">
+                                            <option selected="selected">Select current...</option>
+                                            <option value="0">None</option>
+                                            <option value="1">Light</option>
+                                            <option value="2">Moderate</option>
+                                            <option value="3">Strong</option>
+                                            <option value="4">Ripping</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>Temperature</td>
+				<td>
+					<select name="condTemp">
+                                            <option selected="selected">Select temperature...</option>
+                                            <option value="70">above 70</option>
+                                            <option value="65">60 - 65</option>
+                                            <option value="60">55 - 60</option>
+                                            <option value="55">50 - 55</option>
+                                            <option value="50">under 50</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<br />
+		
+		<table>
+			<tr>
+				<td>Overall</td>
+				<td>
+                                    <input type="radio" name="condOverall" value="2"/> <img src="../pictures/good.png" />
+                                    <input type="radio" name="condOverall" value="1"/> <img src="../pictures/fair.png" />
+                                    <input type="radio" name="condOverall" value="0"/> <img src="../pictures/poor.png" />
+				</td>
+			</tr>
+		</table>
+		<br />
+		
+		<input type="hidden" value="memberid" name="id" />
+		
+		<input type="submit" name="submit" value="Report Conditions" />
+		
+            </form>
+	</body>
+</html>     

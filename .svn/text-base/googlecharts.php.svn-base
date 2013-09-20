@@ -1,0 +1,70 @@
+<?php
+// method declaration        public function callValues($divesite){
+//connect to db to store all values in js array fof google maps
+include'includes/SessionAgent.php';
+$con = auth_db();
+$divesite = $_GET['divesite'];
+
+$result = mysql_query("SELECT * FROM posts WHERE divesite_id_post = " . $divesite . " && date_post >= DATE_SUB(NOW(), INTERVAL 1 DAY) ");
+
+while ($row = mysql_fetch_array($result)) {
+    $visarray[] = $row['vis_post'];
+    $surfarray[] = $row['surf_post'];
+    $surgearray[] = $row['surge_post'];
+    $currentarray[] = $row['current_post'];
+    $temparray[] = $row['temp_post'];
+    $overallarray[] = $row['overall_post'];
+    $counter++;
+}
+
+//This stores the number of rows to generate
+/* $numofitems=$counter; 
+  mysql_close($con);
+
+  $rows=$numofitems*6;
+  echo "<script type=\"text/javascript\">
+  document.getElementById('table');
+  </script>";
+
+  echo 'dataTable.addrows(' . $rows . ')'
+  while (i<($rows)){
+  echo "dataTable.addColumn('" . $visarray[i] . "')";
+  echo "dataTable.addColumn('" . $surfarray[i] . "')";
+  echo "dataTable.addColumn('" . $surgearray[i] . "')";
+  echo "dataTable.addColumn('" . $currentarray[i] . "')";
+  echo "dataTable.addColumn('". $temparray[i] . "')";
+  echo "dataTable.addColumn('". $overallarray[i] . "')";
+  }
+ */
+
+header("Content-type: text/javascript");
+echo json_encode($visarray[]);
+echo json_encode($surfarray[]);
+echo json_encode($surgearray[]);
+echo json_encode($currentarray[]);
+echo json_encode($temparray[]);
+echo json_encode($overallarray[]);
+//            echo json_encode($counter[]);
+
+/* alternative way */
+<?php $arr = callValues($divesite);
+$script = '<script>var newArr = new Array(' . implode(',', $arr) . ');</script>';
+echo $script;
+?>
+
+*dataTable.addRows(20);
+<script type='text/javascript'>
+    $(document).ready(function(){
+        /* call the php that has the php array which is json_encoded */
+        $.getJSON('msqltojavascript.php', function(data) {
+            /* data will hold the php array as a javascript object */
+            $.each(data, function(key, val) {
+                $('ul').append('<li id="' + key + '">' + val.first_name + ' ' + val.last_name + ' ' + val.email + ' ' + val.age + '</li>');
+            });
+        });
+
+
+    });
+</script>
+?>
+~     

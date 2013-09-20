@@ -1,0 +1,169 @@
+<?php
+if($_SERVER['REQUEST_METHOD'] != 'POST'){
+        echo '
+<div class="left"><h1>Please respond to each condition before submitting.</h1>';
+        echo '<table border="">
+                    <tr>
+			<td>Dive Site</td>
+			<td>
+				<form action="reportConditions.php" name="reportconditions" method="post">
+					<select name="diveSite">
+						<option value="" selected="selected">Select dive site...</option>
+						<option value="bw">Break Water</option>
+                                                <option value="mc">McAbee</option>
+						<option value="lv">Lover\'s Cove</option>
+						<option value="cs">Coral Street</option>
+						<option value="bh">Butterfly House</option>
+						<option value="ms">Monastary</option>
+						<option value="pl">Point Lobos</option>
+					</select>
+                        </td>
+                    </tr>	
+			
+                    <tr></tr>
+		
+		
+		
+                    <tr>
+			<td>Visibility</td>
+			<td>
+				<select name="condVis">
+					<option value="" selected="selected">Select visibility...</option>
+					<option value="40">above 40\'</option>
+					<option value="35">30\' - 35\'</option>
+					<option value="30">30\' - 35\'</option>
+					<option value="25">25\' - 30\'</option>
+					<option value="20">20\' - 25\'</option>
+					<option value="15">15\' - 20\'</option>
+					<option value="10">10\' - 15\'</option>
+					<option value="5">5\' - 10\'</option>
+					<option value="0">under 5\'</option>
+				</select>
+			</td>
+                    </tr>
+			
+                    <tr>
+			<td>Surf</td>
+			<td>
+				<select name="condSurf">
+					<option value="" selected="selected">Select surf...</option>
+					<option value="0">Ankle</option>
+					<option value="1">Knee</option>
+					<option value="2">Waist</option>
+					<option value="3">Shoulder</option>
+				</select>
+			</td>
+                    </tr>
+			
+                    <tr>
+			<td>Surge</td>
+			<td>
+				<select name="condSurge">
+					<option value="" selected="selected">Select surge...</option>
+					<option value="0">None</option>
+					<option value="1">Light</option>
+					<option value="2">Moderate</option>
+					<option value="3">Strong</option>
+					<option value="4">Very Strong</option>
+				</select>
+			</td>
+                    </tr>
+			
+                    <tr>
+			<td>Current</td>
+			<td>
+				<select name="condCurrent">
+					<option value=" " selected="selected">Select current...</option>
+					<option value="0">None</option>
+					<option value="1">Light</option>
+					<option value="2">Moderate</option>
+					<option value="3">Strong</option>
+					<option value="4">Ripping</option>
+				</select>
+                        </td>
+                    </tr>
+			
+                    <tr>
+			<td>Temperature</td>
+			<td>
+				<select name="condTemp">
+					<option value="" selected="selected">Select temperature...</option>
+					<option value="70">above 70</option>
+					<option value="65">60 - 65</option>
+					<option value="60">55 - 60</option>
+					<option value="55">50 - 55</option>
+					<option value="50">under 50</option>		
+				</select>
+			</td>
+                    </tr>
+		
+                    <tr><td></td></tr>
+                    
+                    <tr>
+			<td>Overall</td>
+			<td>
+				<input type="radio" name="condOverall" value="2"/> <img src="../pictures/good.png" />
+				<input type="radio" name="condOverall" value="1"/> <img src="../pictures/fair.png" />
+				<input type="radio" name="condOverall" value="0"/> <img src="../pictures/poor.png" />
+			</td>
+                    </tr>
+                    
+		</table>
+                
+		<br />
+		
+		<input type="hidden" name="id" value="memberid" />
+		
+		<input type="submit" name="submit" value="Report Conditions" />
+		
+		</form></div>';
+    }
+else{
+if(!isset($_POST['diveSite']))
+{
+  $errorMessage .= "<li>You forgot to select your divesite</li>";
+}
+if(!isset($_POST['condVis']))
+{
+  $errorMessage .= "<li>You forgot to select the Visibility</li>";
+}
+if(!isset($_POST['condSurf']))
+{
+  $errorMessage .= "<li>You forgot to select the Surf/li>";
+}
+if(!isset($_POST['condSurge']))
+{
+  $errorMessage .= "<li>You forgot to select the Surge</li>";
+}
+if(!isset($_POST['condCurrent']))
+{
+  $errorMessage .= "<li>You forgot to select the Current</li>";
+}
+if(!isset($_POST['condTemp']))
+{
+  $errorMessage .= "<li>You forgot to select the Temperature</li>";
+}
+if(!isset($_POST['condOverall']))
+{
+  $errorMessage .= "<li>You forgot to select your Overall rating</li>";
+}
+if(isset($_POST['reportconditions']) )
+{
+  $varDive = $_POST['diveSite'];
+  $varVis = $_POST['condVis'];
+  $varSurf = $_POST['condSurf'];
+  $varSrge=$_POST['condSurge'];
+  $varCurr=$_POST['condCurrent'];
+  $varTmp=$_POST['condTemp'];
+  $varOvl=$_POST['condOverall'];
+  $errorMessage = "";
+}
+
+$query="INSERT INTO conditions (post_user_id, post_divesite_id, post_vis, post_surf, post_surge, post_curr, post_temp, post_overall, post_time, post_date) VALUES ('" . $_POST[$_SESSION['user_name']] . "', '$varDive', '$varVis', '$varSurf', '$varSrge', '$varCur', '$varTmp', '$varOvl',NOW(), DATE())";
+$result=mysql_query($query);
+   mysql_close($con);
+   
+   
+echo '<h1>Thank you for reporting!</h1></div>';
+}
+?>

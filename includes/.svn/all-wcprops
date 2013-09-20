@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/scuba/!svn/ver/279/trunk/includes
+END
+connect.php
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/scuba/!svn/ver/16/trunk/includes/connect.php
+END
+SessionAgent.php
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/scuba/!svn/ver/279/trunk/includes/SessionAgent.php
+END
+constants.php
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/scuba/!svn/ver/118/trunk/includes/constants.php
+END

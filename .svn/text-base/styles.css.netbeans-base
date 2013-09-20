@@ -1,0 +1,154 @@
+body{
+        background-color:gray;
+        color: black;
+}
+div.wrapper{
+        position:absolute;
+        height:100%;
+        width:90%;
+        background-color:white;
+        margin: 0 auto;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+}
+div.banner{
+        background:-moz-linear-gradient(top, #FF0000, #FF6347);
+        width: 100%;
+       background: #09C;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        position: absolute;
+        top: 0;
+        margin-bottom: 15px;
+        color: blue;
+        border-bottom: solid blue 5px;
+
+}
+div.banner h1{
+	 font-size: 24pt;
+	}
+div.menu2{
+        border-top: solid 1px black;
+        border-bottom: solid 1px black;
+        margin: 0 auto;
+        position: absolute;
+        width: 50%;
+        padding: 0;
+        font-size:12pt;
+}
+div.menu2 li{
+        list-style-type:none;
+        display:inline;
+        float:left;
+        position: relative;
+        height: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        color: white;
+        border: solid white 2px;
+        text-decoration: none;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        margin:1px;
+}
+/*div.menu{
+        border-top: solid 1px black;
+        border-bottom: solid 1px black;
+        margin: 0 auto;
+        position: relative;
+        float:right;
+        width: 50%;
+        top:0px;
+        padding: 0;
+        background-color:#F5F5F5;
+        font-size:12pt;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+}
+div.menu li{
+        list-style-type:none;
+        display:inline;
+        float:left;
+        position: relative;
+        height: 20px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+}
+div.menu a{
+        color: white;
+        border: solid white 2px;
+        text-decoration: none;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        margin:1px;
+        padding:2px;
+}
+a:hover {background-color:#FF0000;}
+a:link{color:black; background:-moz-linear-gradient(top, #FF0000, #FF6347);}
+a:link{color:white; background:-moz-linear-gradient(silver 30%, white, black 100%);}
+a:active{background-color:#FF7F50;}
+a:visited{background-color:#FF0000;}
+*/
+div.content{
+/*      background: linear-gradient(45deg, transparent 15px, rgba(0,0,0,0.5)0);*/       background:white;
+        top: 225px;
+        position:absolute;
+        width:100%;
+        padding: 2px;
+        margin: 0 auto;
+}
+div.left{position:relative; float:left; padding:10px;}
+div.right{position:relative; float:right; padding:10px}
+div.footer{
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right:0;
+        background:-moz-linear-gradient(top, #FF0000, #FF6347);
+		background:#09C
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+/*gradient for firefox*/
+        padding:2px;
+ /* Height of the footer */
+        /*ie*/
+        filter:alpha(opacity=80);
+        filter:progid:DXImageTransform.Microsoft.gradient(strartColorstr='#777777', endColorstr='#555555');
+}
+.menu{
+	width:100%;
+	}
+.menu ul{
+    margin: 0; padding: 0;
+    float: left;}
+ 
+.menu ul li{
+    display: inline;}
+ 
+.menu ul li a{
+    float: left; text-decoration: none;
+    color: white;
+    padding: 10.5px 11px;
+    background-color: #333; }
+	
+.menu ul li a:visited{
+    color: white;}
+ 
+.menu ul li a:hover, .menu ul li .current{
+    color: #fff;
+    background-color:#0b75b2;}
+div.topright{
+    display:block;
+
+    /*set the div in the top right corner*/
+    position:absolute;
+    top:0;
+    right:0;
+    width:250px;
+	height:150px;
+	padding:5px;
+    
+    /*give it some background and border*/
+    background:#eee;
+    border:1px solid #ddd;
+  }

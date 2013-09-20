@@ -1,0 +1,103 @@
+/* 
+    Document   : mobile1
+    Created on : Mar 22, 2012, 10:57:50 AM
+    Author     : Rach
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+html, body {
+		font: 12px/15px sans-serif;
+		background: #fff;
+		padding: 3px;
+		color: #000;
+		margin: 0;
+		}
+	#sidebar, #footer {
+		display: none;
+		}
+	h1, h2, h3, h4, h5, h6 {
+		font-weight: normal;
+		}
+	#content img { 
+		max-width: 250px;
+		}
+	.center {
+		width: 100% !important;
+		text-align: center;
+		}
+	/*a:link, a:visited {
+		text-decoration: underline;
+		color: #0000CC;
+		}
+	a:hover, a:active {
+		text-decoration: underline;
+		color: #660066;
+		}*/
+
+}
+/* iPhone-specific styles */
+@media only screen and (max-device-width: 480px) { 
+
+	html {
+		-webkit-text-size-adjust: none;
+		}
+
+} 
+div.header img{
+    float:left;
+    height:20%;
+    width:20%;
+    
+}
+
+div.register{
+      margin:0 auto;
+      background:#09C;
+      padding-top: 2px;
+      padding-left: 3px;
+      
+  }
+  div.register h1 p{
+      text-align: center; 
+      
+  }
+ 
+
+#nav,#nav li{
+  float:none!important;
+  clear:both!important;
+  margin:0 0 20px 0!important;
+  display:block;
+  padding:0;
+  text-align:left!important;
+  width:100%;
+    display: inline;
+}
+#nav{
+  border:1px solid #ccc;
+ 
+  -webkit-border-radius:5px;
+}
+#nav ul li{
+  margin:0!important;
+ 
+  
+}
+#nav li a{
+  display:block;
+    float: left;
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+    background-color: #333;
+}

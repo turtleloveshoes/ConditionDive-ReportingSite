@@ -1,0 +1,25 @@
+<?php
+$message=$_POST['Your_Message'];
+$usermail=$_POST['user_mail'];
+
+$yoursite = 'Condition:Dive';
+$webmaster = 'Webmaster';
+$youremail = 'icegecko1223@aol.com';
+    
+$subject = "Thank you for contacting $yoursite";
+$message = "Dear $usermail, 
+Thank you for contacting Condition Dive. Please give us a few business days to get back to you.
+    
+  
+    
+    Thanks,
+    $webmaster";
+    
+mail($useremail, $subject, $message, "From: $yoursite <$youremail>\nX-Mailer:PHP/" . phpversion());
+    
+echo "Your information has been mailed to your email address.";
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+?>

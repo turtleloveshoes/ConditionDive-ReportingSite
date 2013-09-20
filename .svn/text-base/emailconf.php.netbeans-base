@@ -1,0 +1,24 @@
+<?php
+$usermail=$_POST['email'];
+$usserpass=$_POST['pass'];
+
+$yoursite = 'Condition:Dive';
+$webmaster = 'Webmaster';
+$youremail = 'icegecko1223@aol.com';
+    
+$subject = "You have successfully registered at $yoursite";
+$message = "Dear $usermail, you are now registered at Condition Dive. Thank you for registering.  
+    To login, simply go to our web page and enter in the following details in the login form:
+    Username: $useremail
+    Password: $userpass
+    
+  
+    
+    Thanks,
+    $webmaster";
+    
+mail($useremail, $subject, $message, "From: $yoursite <$youremail>\nX-Mailer:PHP/" . phpversion());
+    
+echo "Your information has been mailed to your email address.";
+
+?>

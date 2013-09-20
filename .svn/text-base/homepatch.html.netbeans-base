@@ -1,0 +1,98 @@
+<html>
+<head>
+<!--    <script type="text/javascript">if ((window.screen.width < 640) || (window.screen.height < 640)){document.write('<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />')}</script>
+
+<link type="text/css" rel="stylesheet" media="all" href="css/style.css" />
+<link type="text/css" rel="stylesheet" media="only screen and (max-width: 640px)" href="css/mobile.css" />
+-->
+
+<link type="text/css" rel="stylesheet" media="all" href="css/styles.css" />
+<link type="text/css" rel="stylesheet" media="all" href="css/images.css" />
+        <title>Condition: Dive</title>
+</head>
+<body>
+<div class="wrapper">
+  <!--wrapper-->
+  <div class="banner">
+    <!--banner-->
+    <!--    <p><img src="aquaticdiscoveryimage.jpg"/></p>-->
+    <h1>Condition:DIVE <img src="turtle.jpg" height="100px" width="75px" alt="Turtle" style= "float:left"/></h1>
+	<h2>The Digital Dive Log The Dive Database</h2>   
+   <div class="topright">
+      <!--menu-->
+        Member Login
+        <?php
+        if($_SESSION['signed_in'])
+        {echo'<a class="item" href="home.php?userid='. $_SESSION['user_name'] . '">Home</a> ';
+
+                echo 'Hello' . $_SESSION['user_name'] . '. Not you? <a href="../php/signout.php">Sign out</a>';
+             
+        }
+        else
+        {
+        echo'   <p>Member Login</p>';
+        echo '<form action="">Username:<input type="text"/><br/>Password<input type="text"/></form>
+<p>Not a Member? <a href="php/signup.php"/>Sign Up</a></p>';
+        }
+echo'</div> <!--menu-->';
+?>
+        
+</div> <!--menu-->
+
+<div class="menu" >
+<?php
+        if($_SESSION['signed_in'])
+        {echo'<a class="item" href="home.php?userid='. $_SESSION['user_name'] . '">Home</a> ';
+
+                echo '<ul>
+                       <li> <a href="index.html"> Home </a></li>
+                       <li> <a href="report.php?"> Report Conditions </a></li>
+                        <li><a href="graph.php"> View Conditions </a></li>
+                       <li><a href="logout.php"> Logout </a></li>
+					</ul>';
+             
+        }
+        else
+        {
+        echo'  
+ 					<ul>
+                       <li> <a href="index.html"> Home </a></li>
+                       <li> <a href="about.php?"> About </a></li>
+                        <li><a href="contact.php"> Contact </a></li>
+                    
+					</ul>';
+        echo '';
+        }
+echo'</div> <!--menu-->';
+?>
+</div>
+<br style="clear:left"/>
+
+    </div>
+    <!--banner-->
+    <div class="content"></div>
+    <!--content-->
+    <div class="footer">
+      <ul>
+        <p>Responsible Reporting:</p>
+        <li>Report only on dive sites you\'ve actually dove at the time you report. </li>
+        <li>Please report as soon as possible and never more than 4 hours after the dive. </li>
+        <li>You may only submit one report per dive. </li>
+      </ul>
+      <div class="menu">
+      <p>Additional Resources</p>
+        <ul>
+          <li><a href="http://www.aquaticdiscovery.com/conditiondive/about.html">About</a></li>
+          <li><a href="http://mobile.wunderground.com/cgi-bin/findweather/getForecast?query=Monterey+CA">Weather</a></li>
+          <li><a href="http://www.aquaticdiscovery.com/conditiondive/monterey.html">Swell Model</a></li>
+          <li><a href="http://mobile.wunderground.com/auto/mobile/MAR/PZ/535.html">Marine Forecast</a></li>
+          <li><a href="http://www.aquaticdiscovery.com/conditiondive/tide.html">Tide Tables</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--footer-->
+  </div>
+  <!--wrapper-->
+</div>
+</body>
+</html>

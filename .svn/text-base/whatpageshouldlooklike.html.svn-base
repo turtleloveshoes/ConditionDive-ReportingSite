@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>												
+<html>
+    <head>
+    <!--    <script type="text/javascript">if ((window.screen.width < 640) || (window.screen.height < 640)){document.write('<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1" />')}</script>
+    
+            <link type="text/css" rel="stylesheet" media="all" href="css/style.css" />
+            <link type="text/css" rel="stylesheet" media="only screen and (max-width: 640px)" href="css/mobile.css" />
+        -->
+        <link type="text/css" rel="stylesheet" media="all" href="../css/styles.css" />
+        <link type="text/css" rel="stylesheet" media="all" href="../css/mobile.css" />
+
+        <title>Condition: Dive</title>
+
+    </head>
+
+    <body>
+<div class="content">
+            <div class="banner">
+
+                <h1>Condition:DIVE <a href="index.php"><img src="../pictures/turtle.png" height="100" width="75" alt="Turtle" style= "float:left"/></a></h1>
+                <h2>Scuba Diving Conditions in Northern California</h2>   
+
+
+                <div class="menu">
+                   <!-- <?php
+                    if (isset($_SESSION['signed_in']) && $_SESSION['signed_in'] == 'true') {
+                        echo'--><ul>
+                       <li> </li>
+                       <li><a href="index.php">Home</a></li>
+                       <li><a href="contact.php">Contact</a></li>
+                       <li><a href="googlemap.php">Map</a></li>
+                       <li><a href="about.php">Evaluating Conditions</a></li>
+                       <li><a href="viewConditions.php">View Conditions</a></li>
+                       <li><a href="reportnow.php">Report Conditions</a></li>
+                       <li><a href="../testlogin/yaylogout.php">Logout</a></li>
+                       <li>Hello ' . $_SESSION['user_email'] . '</li>
+                       <li></li>
+                       
+                    </ul>';
+                   <!-- } else {
+
+
+                        echo'  <ul>
+                       <li> </li>
+                       <li><a href="index.php">Home</a></li>
+                       <li><a href="contact.php">Contact</a></li>
+                       <li><a href="googlemap.php">Map</a></li>
+                       <li><a href="about.php">Evaluating Conditions</a></li>
+                       <li><a href="">View Conditions</a></li>
+                       <li><a href="">Report Conditions</a></li>
+                       <li><a href="register.php">Register </a></li>
+                       <li><a href="/index.php">Login </a></li>
+                       <li></li>
+                   </ul>';
+                    }
+                    ?>  -->
+                    <br/>
+                </div><!---menu-->
+            </div><!--Banner-->
+
+    
+    <article>StuffLorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at enim magna. Donec id eleifend diam. Vestibulum facilisis lorem eget justo congue eget faucibus ipsum convallis. Quisque egestas tellus id nisl porttitor ac placerat felis fringilla. Pellentesque purus lacus, vehicula et eleifend in, sodales semper nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean posuere auctor lectus quis feugiat. Integer condimentum velit nec augue ultrices tincidunt. Ut non dolor dui. Fusce eget consectetur massa. Nunc mollis rutrum quam id hendrerit. Aenean urna lacus, fermentum non pellentesque posuere, mollis ac erat.
+
+Aenean vel risus tortor, non euismod enim. Pellentesque mi ligula, fringilla a sollicitudin id, pellentesque et quam. Maecenas cursus felis in turpis vehicula egestas eu a quam. Mauris non bibendum metus. Praesent purus nulla, tempus non convallis a, tincidunt nec ligula. Nunc nulla est, pretium tincidunt fringilla a, pharetra vitae eros. Quisque aliquam tristique orci, eu iaculis orci adipiscing eu. Morbi tincidunt arcu quis mauris consequat vitae gravida ligula ultrices. Nunc pretium dui id lectus porta at aliquet ante rhoncus. Sed auctor faucibus commodo. Cras quis orci vitae ante rhoncus rutrum a ut ante. Curabitur malesuada, dui eu hendrerit porta, lectus elit dapibus ipsum, nec porttitor mi nisl eu libero.
+
+Suspendisse venenatis vestibulum aliquam. Nunc accumsan lobortis dui ac adipiscing. Nam rhoncus hendrerit neque, at tempus erat commodo id. Nunc dapibus molestie nisi ut congue. Nullam volutpat, est quis faucibus dignissim, diam enim posuere turpis, non aliquam est mauris ac eros. Nullam posuere velit ac mi laoreet quis consequat sem malesuada. Pellentesque tempus posuere pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vestibulum sed leo dolor. Pellentesque nunc augue, ullamcorper nec posuere vitae, condimentum in felis. Quisque eget pretium mauris. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eleifend rutrum purus, ut viverra sem tincidunt ac. Ut sodales dictum lectus non viverra. Sed vitae metus metus. Vestibulum congue, ligula in porta faucibus, nibh neque ultrices libero, vitae laoreet nisl nibh sed magna. Sed aliquam eleifend semper. Duis velit magna, porta in euismod eu, eleifend ac tellus. Donec mollis sollicitudin viverra. Proin dictum condimentum malesuada. Aliquam mauris velit, rutrum vitae iaculis non, malesuada vehicula diam. Fusce quis vehicula leo. Integer non rutrum nibh. Etiam vulputate turpis at odio mollis adipiscing. Donec sem mi, condimentum at mollis et, venenatis et sem.
+
+Maecenas suscipit turpis eget justo volutpat aliquet. Pellentesque elit tellus, bibendum eu euismod id, lobortis sit amet eros. Mauris faucibus ligula sem, id ultricies orci. Quisque rhoncus purus non nulla posuere luctus. Aliquam erat volutpat. Mauris venenatis suscipit pellentesque. Donec ornare porta nisl vel tempus. Cras iaculis, nulla ut tincidunt semper, metus risus cursus turpis, et pharetra metus purus vitae libero. Proin non ipsum eget nibh venenatis porttitor consectetur vitae mi. Mauris metus eros, feugiat sollicitudin rhoncus vitae, tempus ut felis. </article>
+<div class="footer">
+    <p>Responsible Reporting:</p>
+    <ul>
+        <li>Report only on dive sites you have actually dove. </li>
+        <li>Please report as soon as possible and never more than 4 hours after the dive. </li>
+        <li>Only submit one report per dive. </li>
+    </ul>
+    <div class="menu">
+        <p>Additional Resources</p>
+        <ul>
+            <li><a href="index.php"> Home </a></li>
+            <li><a href="about.php">About</a></li>
+            <li><a href="contact.php">Contact</a></li>
+            <li><a href="googlemap.php">Map</a></li>
+            <li><a href="http://mobile.wunderground.com/cgi-bin/findweather/getForecast?query=Monterey+CA">Weather</a></li>
+            <li><a href="http://www.aquaticdiscovery.com/conditiondive/monterey.html">Swell Model</a></li>
+            <li><a href="http://mobile.wunderground.com/auto/mobile/MAR/PZ/535.html">Marine Forecast</a></li>
+            <li><a href="http://www.aquaticdiscovery.com/conditiondive/tide.html">Tide Tables</a></li>
+
+        </ul>
+    </div>
+</div>
+            </div><!--end content-->
+            
+

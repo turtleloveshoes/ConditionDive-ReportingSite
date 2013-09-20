@@ -1,0 +1,66 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <h2>Create a Site</h2>
+        <form method="createdivesite.php">
+            <input type="text" name="dive_site" value="enter dive site name here" size="200" />
+            <input type="submit" value="Create Site!" />
+        </form>
+        
+        
+        <h2>Remove a site</h2>
+        <form method="removesite.php">
+            <select name="divsites" id='removesite' onchange="javascript:listDive()" disabled="disabled">
+            <option selected>----Select----</option>
+            <%
+            ResultSet rs = stmt.executeQuery("SELECT divesite_id FROM divesites ORDER BY divesite_id");
+            while(rs.next())
+                {
+                    out.println("<option id=" + rs.getString(1) + " value=" + rs.getString(1) + " name=" + rs.getString(1) + ">"rs.getString(2) + "</option>");
+                }
+            rs.close();
+            %>
+            </select>
+            <input type="submit" value="Remove Site!" />
+        </form>
+        
+        <?php
+        $con = mysql_connect("localhost","peter","abc123");
+        if (!$con)
+        {
+            die('Could not connect: ' . mysql_error());
+        }
+
+        mysql_select_db("divesites", $con);
+
+        $result = mysql_query("SELECT * FROM divesites");
+        echo "<h2>Current Dive Sites</h2>";
+        echo "<table border='1' id="dive">
+        <tr>
+        <th>Diving Site</th>
+        <th>State</th>
+        <th>Today's Post Count</th>
+        </tr>";
+
+    while($row = mysql_fetch_array($result))
+    {
+        echo "<tr>";
+        echo "<td>" . $row['divsite_id'] . "</td>";
+        echo "<td>" . $row['divesite_state'] . "</td>";
+        echo "<td>" . $row['divesite_postcounter'] . "</td>";
+        echo "</tr>";
+     }
+    echo "</table>";
+
+    mysql_close($con);
+        ?>
+    </body>
+</html>
